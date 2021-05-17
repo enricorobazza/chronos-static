@@ -101,6 +101,28 @@ body {
   margin-bottom: 10px;
   font-size: 0.95rem;
   font-weight: bold;
+  transition: all ease-in 100ms;
+}
+
+.button .blue {
+  display: none;
+}
+
+.button .white {
+  display: inline;
+}
+
+.button:hover {
+  background-color: white;
+  color: #13294b;
+}
+
+.button:hover .blue {
+  display: inline;
+}
+
+.button:hover .white {
+  display: none;
 }
 
 .button img {
@@ -136,7 +158,28 @@ body {
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+  }
+
+  .button.mobile-active .blue {
+    display: inline;
+  }
+
+  .button.mobile-active .white {
+    display: none;
+  }
+
+  .button.mobile-active {
+    background-color: white;
+    color: #13294b;
+  }
+
+  .mobile.status .text {
+    font-size: 1.2rem;
+  }
+
+  .mobile.status .gear img {
+    width: 50px;
   }
 
   .desk {
@@ -154,7 +197,7 @@ body {
     width: 70px;
   }
   .slogan {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
   .blue-overlay {
     flex-direction: column;
@@ -163,9 +206,10 @@ body {
   .logo {
     flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0;
   }
 
   .logo-img {
@@ -178,11 +222,12 @@ body {
   }
 
   .info {
+    padding: 0;
     padding-top: 5%;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   .status {
