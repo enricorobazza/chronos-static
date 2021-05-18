@@ -85,16 +85,13 @@ body {
 .button {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0 17px;
-
+  padding: 5px 17px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   border: 2px solid white;
   border-radius: 10px;
-  display: block;
   color: white;
   text-align: center;
   margin-top: 30px;
@@ -125,14 +122,27 @@ body {
   display: none;
 }
 
-.button img {
+.button .text {
+  flex: 4;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button .image {
+  flex: 1;
+  display: inline-flex;
+  justify-content: flex-start;
+  margin-left: 2px;
+  align-items: center;
+}
+
+.button .image img {
   vertical-align: top;
-  margin-top: 4.5px;
-  margin-left: 10px;
   height: 30px;
 }
 
-.button span {
+.button .text span {
   vertical-align: top;
   /* border: 1px solid red; */
   display: inline-flex;
@@ -228,6 +238,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 50%;
   }
 
   .status {
@@ -242,5 +253,25 @@ body {
 
   .buttons {
     padding-top: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .info {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .button {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
