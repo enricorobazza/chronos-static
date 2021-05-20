@@ -9,7 +9,7 @@ body {
   background: url("./images/caaso.jpeg");
   background-size: cover;
   color: white;
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
 }
 
 .mobile {
